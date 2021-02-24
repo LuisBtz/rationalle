@@ -1,6 +1,16 @@
 import { createGlobalStyle } from "styled-components"
 
 const GlobalStyles = createGlobalStyle`
+
+
+:root {
+    --self: 'Self Modern';
+    --helvetica: 'Helvetica Neue LT Pro';
+
+    --bgColor: '#F9F7EE';
+}
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -42,5 +52,13 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+html, body {
+	line-height: 1;
+    font-family: var(--self);
+    background-color: var(--bgColor);
+	color: #333225;
+}
+
 `
 export default GlobalStyles

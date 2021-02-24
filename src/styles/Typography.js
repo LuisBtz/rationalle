@@ -39,13 +39,10 @@ const Typography = createGlobalStyle`
     font-display: swap;
 }
 
-:root {
-    --self: 'Self Modern';
-    --helvetica: 'Helvetica Neue LT Pro';
-}
-body {
-	line-height: 1;
-    font-family: var(--self);
+
+a {
+    color: black;
+    text-decoration: none;
 }
 
 `
