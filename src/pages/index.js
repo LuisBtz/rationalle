@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import Logo from "../components/Logo"
 import styled from "styled-components"
-import BoxWrapper from "../components/BoxWrapper"
+import Box from "../components/Box"
 import Footer from "../components/Footer"
 
 export default function IndexPage() {
@@ -10,7 +10,7 @@ export default function IndexPage() {
     <Layout>
       <Wrapper>
         <Logo />
-        <BoxWrapper />
+        <Box />
         <Footer />
       </Wrapper>
     </Layout>
