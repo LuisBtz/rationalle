@@ -25,4 +25,7 @@ const FooterTextWrapper = styled.div`
     padding: 10px 0 0px 0;
     font-family: var(--helvetica);
   }
+  @media (max-width: 650px) {
+    bottom: 109px;
+  }
 `;
