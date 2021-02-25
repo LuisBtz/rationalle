@@ -3,8 +3,27 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export default function Box({ constraintsRef }) {
+  const topPosition = Math.floor(Math.random() * 25) + 1;
+  const leftPosition = Math.floor(Math.random() * 50) + 1;
+
+  const myArray = ['#f2ffb4', '#E1BFFF', '#F2FFB4', '#FF989B'];
+
+  const randomItem = myArray[Math.floor(Math.random() * myArray.length)];
+
+  const variableStyles = {
+    background: `${randomItem}`,
+    top: `${topPosition}%`,
+    left: `${leftPosition}%`,
+    position: 'absolute',
+  };
+
   return (
-    <BoxWrapper drag dragConstraints={constraintsRef} dragElastic={0.1}>
+    <BoxWrapper
+      drag
+      dragConstraints={constraintsRef}
+      dragElastic={0.1}
+      style={variableStyles}
+    >
       <Texto>
         <p>
           A label born out of New York but a project that spans cities,
@@ -19,23 +38,12 @@ export default function Box({ constraintsRef }) {
   );
 }
 
-const top = Math.floor(Math.random() * 25) + 1;
-const left = Math.floor(Math.random() * 50) + 1;
-
-const myArray = ['#f2ffb4', '#E1BFFF', '#F2FFB4', '#FF989B'];
-
-const randomItem = myArray[Math.floor(Math.random() * myArray.length)];
-
 const BoxWrapper = motion.custom(styled.div`
   cursor: move;
-  background: ${randomItem};
   height: 550px;
   max-width: 470px;
   padding: 20px;
   box-sizing: border-box;
-  position: absolute;
-  top: ${top}%;
-  left: ${left}%;
   z-index: 1;
   display: grid;
   align-items: end;
