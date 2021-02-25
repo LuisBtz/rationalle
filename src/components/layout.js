@@ -1,6 +1,6 @@
-import React from "react"
-import GlobalStyles from "../styles/GlobalStyles"
-import Typography from "../styles/Typography"
+import React from 'react';
+import GlobalStyles from '../styles/GlobalStyles';
+import Typography from '../styles/Typography';
 
 const Layout = ({ children }) => {
   return (
@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
         <main>{children}</main>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

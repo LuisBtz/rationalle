@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import { motion } from "framer-motion"
+import React from 'react';
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export default function Box({ constraintsRef }) {
   return (
@@ -16,15 +16,15 @@ export default function Box({ constraintsRef }) {
       </Texto>
       <strong>2021</strong>
     </BoxWrapper>
-  )
+  );
 }
 
-const top = Math.floor(Math.random() * 25) + 1
-const left = Math.floor(Math.random() * 50) + 1
+const top = Math.floor(Math.random() * 25) + 1;
+const left = Math.floor(Math.random() * 50) + 1;
 
-const myArray = ["#f2ffb4", "#E1BFFF", "#F2FFB4", "#FF989B"]
+const myArray = ['#f2ffb4', '#E1BFFF', '#F2FFB4', '#FF989B'];
 
-const randomItem = myArray[Math.floor(Math.random() * myArray.length)]
+const randomItem = myArray[Math.floor(Math.random() * myArray.length)];
 
 const BoxWrapper = motion.custom(styled.div`
   cursor: move;
@@ -57,7 +57,7 @@ const BoxWrapper = motion.custom(styled.div`
       bottom: 248px;
     }
   }
-`)
+`);
 
 const Texto = styled.div`
   align-self: end;
@@ -74,4 +74,4 @@ const Texto = styled.div`
   @media (max-width: 650px) {
     font-size: 1rem;
   }
-`
+`;

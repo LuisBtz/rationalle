@@ -1,11 +1,11 @@
-import React, { useRef } from "react"
-import Logo from "../components/Logo"
-import styled from "styled-components"
-import Box from "../components/Box"
-import Footer from "../components/Footer"
+import React, { useRef } from 'react';
+import Logo from '../components/Logo';
+import styled from 'styled-components';
+import Box from '../components/Box';
+import Footer from '../components/Footer';
 
 export default function IndexPage() {
-  const constraintsRef = useRef(null)
+  const constraintsRef = useRef(null);
   return (
     <>
       <Wrapper ref={constraintsRef}>
@@ -14,7 +14,7 @@ export default function IndexPage() {
         <Footer />
       </Wrapper>
     </>
-  )
+  );
 }
 
 const Wrapper = styled.div`
@@ -23,4 +23,4 @@ const Wrapper = styled.div`
   background: #f9f7ee;
   overflow: hidden;
   position: relative;
-`
+`;

@@ -1,16 +1,16 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from 'styled-components';
 
-import helveticaEot from "../fonts/HelveticaNeueLTPro-Md.eot"
-import helveticaSvg from "../fonts/HelveticaNeueLTPro-Md.svg"
-import helveticaTtf from "../fonts/HelveticaNeueLTPro-Md.ttf"
-import helveticaWoff from "../fonts/HelveticaNeueLTPro-Md.woff"
-import helveticaWoff2 from "../fonts/HelveticaNeueLTPro-Md.woff2"
+import helveticaEot from '../fonts/HelveticaNeueLTPro-Md.eot';
+import helveticaSvg from '../fonts/HelveticaNeueLTPro-Md.svg';
+import helveticaTtf from '../fonts/HelveticaNeueLTPro-Md.ttf';
+import helveticaWoff from '../fonts/HelveticaNeueLTPro-Md.woff';
+import helveticaWoff2 from '../fonts/HelveticaNeueLTPro-Md.woff2';
 
-import selfEot from "../fonts/SelfModern-Regular.eot"
-import selfSvg from "../fonts/SelfModern-Regular.svg"
-import selfTtf from "../fonts/SelfModern-Regular.ttf"
-import selfWoff from "../fonts/SelfModern-Regular.woff"
-import selfWoff2 from "../fonts/SelfModern-Regular.woff2"
+import selfEot from '../fonts/SelfModern-Regular.eot';
+import selfSvg from '../fonts/SelfModern-Regular.svg';
+import selfTtf from '../fonts/SelfModern-Regular.ttf';
+import selfWoff from '../fonts/SelfModern-Regular.woff';
+import selfWoff2 from '../fonts/SelfModern-Regular.woff2';
 
 const Typography = createGlobalStyle`
 @font-face {
@@ -45,6 +45,6 @@ a {
     text-decoration: none;
 }
 
-`
+`;
 
-export default Typography
+export default Typography;
