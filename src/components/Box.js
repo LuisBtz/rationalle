@@ -1,28 +1,48 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
+// const topPosition = Math.floor(Math.random() * 25) + 1;
+// const leftPosition = Math.floor(Math.random() * 50) + 1;
+
+const myArray = ['#f2ffb4', '#E1BFFF', '#F2FFB4', '#FF989B'];
+
+const randomColor = () => myArray[Math.floor(Math.random() * myArray.length)];
+
+const randomLeft = () => Math.floor(Math.random() * 50) + 1;
+const randomTop = () => Math.floor(Math.random() * 50) + 1;
+
 export default function Box({ constraintsRef }) {
-  const topPosition = Math.floor(Math.random() * 25) + 1;
-  const leftPosition = Math.floor(Math.random() * 50) + 1;
+  // Random color
+  const [bgColor, setBgColor] = useState();
+  useEffect(() => {
+    setBgColor(randomColor());
+  }, []);
 
-  const myArray = ['#f2ffb4', '#E1BFFF', '#F2FFB4', '#FF989B'];
+  // random X
+  const [leftPosition, setLeftPosition] = useState();
+  useEffect(() => {
+    setLeftPosition(randomLeft());
+  }, []);
 
-  const randomItem = myArray[Math.floor(Math.random() * myArray.length)];
+  // random Y
 
-  const variableStyles = {
-    background: `${randomItem}`,
-    top: `${topPosition}%`,
-    left: `${leftPosition}%`,
-    position: 'absolute',
-  };
+  const [topPosition, setTopPosition] = useState();
+  useEffect(() => {
+    setTopPosition(randomTop());
+  }, []);
 
   return (
     <BoxWrapper
       drag
       dragConstraints={constraintsRef}
       dragElastic={0.1}
-      style={variableStyles}
+      style={{
+        position: 'absolute',
+        backgroundColor: bgColor,
+        left: `${leftPosition}%`,
+        top: `${topPosition}%`,
+      }}
     >
       <Texto>
         <p>
