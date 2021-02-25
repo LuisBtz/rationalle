@@ -59,6 +59,10 @@ export default function Box({ constraintsRef }) {
 }
 
 const BoxWrapper = motion.custom(styled.div`
+  padding: absolutel;
+  left: 60%;
+  top: 70%;
+  background: '#f2ffb4';
   cursor: move;
   height: 550px;
   max-width: 470px;
