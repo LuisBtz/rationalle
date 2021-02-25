@@ -1,19 +1,19 @@
-import React from "react"
-import Layout from "../components/layout"
+import React, { useRef } from "react"
 import Logo from "../components/Logo"
 import styled from "styled-components"
 import Box from "../components/Box"
 import Footer from "../components/Footer"
 
 export default function IndexPage() {
+  const constraintsRef = useRef(null)
   return (
-    <Layout>
-      <Wrapper>
+    <>
+      <Wrapper ref={constraintsRef}>
         <Logo />
-        <Box />
+        <Box constraintsRef={constraintsRef} />
         <Footer />
       </Wrapper>
-    </Layout>
+    </>
   )
 }
 

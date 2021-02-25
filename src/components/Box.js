@@ -1,26 +1,10 @@
 import React from "react"
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
-export default function Box() {
-  let offsetX, offsetY
-  const move = e => {
-    const el = e.target
-    el.style.left = `${e.pageX - offsetX}px`
-    el.style.top = `${e.pageY - offsetY}px`
-  }
-  const add = e => {
-    const el = e.target
-    offsetX = e.clientX - el.getBoundingClientRect().left
-    offsetY = e.clientY - el.getBoundingClientRect().top
-    el.addEventListener("mousemove", move)
-  }
-  const remove = e => {
-    const el = e.target
-    el.removeEventListener("mousemove", move)
-  }
-
+export default function Box({ constraintsRef }) {
   return (
-    <BoxWrapper onMouseDown={add} onMouseUp={remove}>
+    <BoxWrapper drag dragConstraints={constraintsRef} dragElastic={0.1}>
       <Texto>
         <p>
           A label born out of New York but a project that spans cities,
@@ -42,7 +26,7 @@ const myArray = ["#f2ffb4", "#E1BFFF", "#F2FFB4", "#FF989B"]
 
 const randomItem = myArray[Math.floor(Math.random() * myArray.length)]
 
-const BoxWrapper = styled.div`
+const BoxWrapper = motion.custom(styled.div`
   cursor: move;
   background: ${randomItem};
   height: 550px;
@@ -73,7 +57,8 @@ const BoxWrapper = styled.div`
       bottom: 248px;
     }
   }
-`
+`)
+
 const Texto = styled.div`
   align-self: end;
   font-size: 1.3rem;
