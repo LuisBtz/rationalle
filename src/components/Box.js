@@ -39,8 +39,6 @@ export default function Box({ constraintsRef }) {
       dragElastic={0.1}
       dragTransition={{ bounceStiffness: 50, bounceDamping: 10 }}
       style={{
-        display: 'block',
-        opacity: '1',
         position: 'absolute',
         backgroundColor: bgColor,
         left: `${leftPosition}%`,
@@ -62,7 +60,9 @@ export default function Box({ constraintsRef }) {
 }
 
 const BoxWrapper = motion.custom(styled.div`
-  display: none;
+  position: absolute;
+  top: 110%;
+  left: 110%;
   cursor: move;
   height: 550px;
   max-width: 470px;
