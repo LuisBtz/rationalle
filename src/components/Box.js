@@ -9,8 +9,8 @@ const myArray = ['#f2ffb4', '#E1BFFF', '#F2FFB4', '#FF989B'];
 
 const randomColor = () => myArray[Math.floor(Math.random() * myArray.length)];
 
-const randomLeft = () => Math.floor(Math.random() * 50) + 1;
-const randomTop = () => Math.floor(Math.random() * 50) + 1;
+const randomLeft = () => Math.floor(Math.random() * 52) + 1;
+const randomTop = () => Math.floor(Math.random() * 38) + 1;
 
 export default function Box({ constraintsRef }) {
   // Random color
@@ -37,6 +37,7 @@ export default function Box({ constraintsRef }) {
       drag
       dragConstraints={constraintsRef}
       dragElastic={0.1}
+      dragTransition={{ bounceStiffness: 50, bounceDamping: 10 }}
       style={{
         position: 'absolute',
         backgroundColor: bgColor,
@@ -61,7 +62,7 @@ export default function Box({ constraintsRef }) {
 const BoxWrapper = motion.custom(styled.div`
   padding: absolutel;
   left: 60%;
-  top: 70%;
+  top: 60%;
   background: '#f2ffb4';
   cursor: move;
   height: 550px;

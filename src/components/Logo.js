@@ -11,6 +11,6 @@ export default function Logo() {
 }
 
 const LogoWrapper = styled.div`
-  width: 95%;
+  padding: 30px;
   margin: 0 auto;
 `;
