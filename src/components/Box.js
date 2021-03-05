@@ -1,36 +1,36 @@
-import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react'
+import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 // const topPosition = Math.floor(Math.random() * 25) + 1;
 // const leftPosition = Math.floor(Math.random() * 50) + 1;
 
-const myArray = ['#f2ffb4', '#E1BFFF', '#F2FFB4', '#FF989B'];
+const myArray = ['#f2ffb4', '#E1BFFF', '#F2FFB4', '#FF989B']
 
-const randomColor = () => myArray[Math.floor(Math.random() * myArray.length)];
+const randomColor = () => myArray[Math.floor(Math.random() * myArray.length)]
 
-const randomLeft = () => Math.floor(Math.random() * 52) + 1;
-const randomTop = () => Math.floor(Math.random() * 38) + 1;
+const randomLeft = () => Math.floor(Math.random() * 52) + 1
+const randomTop = () => Math.floor(Math.random() * 38) + 1
 
 export default function Box({ constraintsRef }) {
   // Random color
-  const [bgColor, setBgColor] = useState();
+  const [bgColor, setBgColor] = useState()
   useEffect(() => {
-    setBgColor(randomColor());
-  }, []);
+    setBgColor(randomColor())
+  }, [])
 
   // random X
-  const [leftPosition, setLeftPosition] = useState();
+  const [leftPosition, setLeftPosition] = useState()
   useEffect(() => {
-    setLeftPosition(randomLeft());
-  }, []);
+    setLeftPosition(randomLeft())
+  }, [])
 
   // random Y
 
-  const [topPosition, setTopPosition] = useState();
+  const [topPosition, setTopPosition] = useState()
   useEffect(() => {
-    setTopPosition(randomTop());
-  }, []);
+    setTopPosition(randomTop())
+  }, [])
 
   return (
     <BoxWrapper
@@ -49,14 +49,14 @@ export default function Box({ constraintsRef }) {
         <p>
           A label born out of New York but a project that spans cities,
           countries and cultures. It’s a collaboration of design and style that
-          brings women together, celebrates unique style, and focuses on
-          sustainable and ethical practices.
+          brings women together, celebrates unique style, and focuses on ethical
+          practices.
         </p>
         <span>Coming Soon</span>
       </Texto>
       <strong>2021</strong>
     </BoxWrapper>
-  );
+  )
 }
 
 const BoxWrapper = motion.custom(styled.div`
@@ -89,7 +89,7 @@ const BoxWrapper = motion.custom(styled.div`
       bottom: 248px;
     }
   }
-`);
+`)
 
 const Texto = styled.div`
   align-self: end;
@@ -106,4 +106,4 @@ const Texto = styled.div`
   @media (max-width: 650px) {
     font-size: 1rem;
   }
-`;
+`
